@@ -10,6 +10,14 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 def home():
     return 'initiated successfully!'
     
+@app.route('/check-secrets')
+def check_secrets():
+    #if length of secret keys compared are equal voila.
+    if os.environ.get('SECRET_KEY') == 19:
+        return 'OK'
+    else:
+        return 'NOT_OK'
+    
 @app.route('/dummy-data')
 def dummy_data():
     return jsonify(
