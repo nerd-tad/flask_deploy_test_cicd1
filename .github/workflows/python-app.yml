@@ -31,7 +31,7 @@ jobs:
     - name: Set Environment variables
       uses: actions/checkout@v3
       env:
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        SECRET_KEY: ${{ var.SECRET_KEY }}
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
