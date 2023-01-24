@@ -1,10 +1,10 @@
-from src.flask_app.main import home, dummy_data, check_secret
+from src.flask_app.main import home, dummy_data, check_secrets
 
 def test_home():
     assert home() == 'initiated successfully!'
     
 def test_checkSecret():
-    assert check_secret() == 'OK'
+    assert check_secrets() == 'OK'
 
 '''    
 def  test_dummyData():
