@@ -13,7 +13,7 @@ def home():
 @app.route('/check-secrets')
 def check_secrets():
     #if length of secret keys compared are equal voila.
-    if os.environ.get('SECRET_KEY') == 19:
+    if len(os.environ.get('SECRET_KEY')) == 19:
         return 'OK'
     else:
         return 'NOT_OK'
